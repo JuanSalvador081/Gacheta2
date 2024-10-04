@@ -1,14 +1,17 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Prueba.Entities
 {
+    
     public class Lavanderia
     {
         [Key]
-        public int N_Servicios { get; set; }
-        public int Cedula { get; set; }
-        //relacion con el cuarto
+        public int Id_Lavanderia { get; set; }
+        
+        [ForeignKey("Cuarto")]
         public int N_Cuarto { get; set; }
-        public ICollection<Cuarto>? Cuartos { get; set; }  // Lavandería puede servir varios cuartos
+        public int N_Servicios { get; set; }
     }
 }

@@ -9,8 +9,13 @@ namespace Prueba.Data
         {
            
         }
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Lavanderia> Lavanderias { get; set; }
         public DbSet<Cuarto> Cuartos { get; set; }
-        public DbSet<Lavanderia> lavanderias { get; set; }
+        public DbSet<Historia_Cliente> Historia_Clientes { get; set; }
+
+
+
 
     }
 }
